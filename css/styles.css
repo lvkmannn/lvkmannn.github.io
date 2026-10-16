@@ -168,6 +168,17 @@ img {
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
 
+.profile-photo {
+    width: 18rem;
+    height: 18rem;
+    object-fit: cover;
+    border-radius: 50%;
+    outline: 0.3rem solid var(--main-soft-blue);
+    outline-offset: 0.6rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+    margin-bottom: 4rem;
+}
+
 #welcome-section > p {
     display: flex;
     justify-content: center;
