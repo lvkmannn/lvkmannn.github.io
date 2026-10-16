@@ -58,13 +58,6 @@ html {
       font-size: 50%;
     }
 }
-  
-  /* 460px / 16px = 28.75em */
-  @media (max-width: 28.75em) {
-    html {
-      font-size: 40%;
-    }
-}
 
 /* Base styles */
 
@@ -88,6 +81,19 @@ h1 {
   
 h2 {
     font-size: 4.2rem;
+}
+
+/* Keep body text at 16px or above on tablets and phones */
+@media (max-width: 61.25em) {
+    body {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 28.75em) {
+    h1 {
+        font-size: 4.8rem;
+    }
 }
   
 ul {
@@ -143,7 +149,7 @@ img {
 
     .nav-list a {
         display: block;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         padding: 1.5rem;
     }
 }
@@ -156,7 +162,8 @@ img {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 8rem 2rem;
     background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
@@ -168,9 +175,17 @@ img {
     font-size: 3rem;
     font-weight: 200;
     font-style: italic;
+    text-align: center;
     color: var(--main-soft-blue);
     padding: 10px; /* Consistent padding */
     margin-bottom: 20px; /* Adjust bottom margin for spacing */
+}
+
+/* Reserve two lines so the page doesn't jump when the typed text wraps */
+@media (max-width: 28.75em) {
+    #welcome-section > p {
+        min-height: calc(2.8em + 20px);
+    }
 }
 
 .btn-download {
@@ -307,8 +322,8 @@ img {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 80vh;
-    padding: 0 2rem;
+    min-height: 80vh;
+    padding: 10rem 2rem;
     background-color: var(--main-gray);
 }
 
